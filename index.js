@@ -12,7 +12,7 @@ conexao.connect((erro) => {
 
         const app = customExpress()
 
-        app.listen(3000, () => console.log('Server on'))
+        app.listen(5000, () => console.log('Server on'))
     }
 })
 
