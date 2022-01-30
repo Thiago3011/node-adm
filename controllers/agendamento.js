@@ -1,3 +1,3 @@
 module.exports = app => {
-    app.get('/agendamentos', (req, res) => res.send('Deu certo!'))
+    app.get('/', (req, res) => res.render('../views/index.njk'))
 }

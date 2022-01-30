@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: ghostwhite;
+}
+
+header {
+    width: 100%;
+}
+
+.header-container {
+    width: 100%;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 16%;
+    background-image: url("images/fundoPepsico.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-container .header-logo {
+    height: 60%;
+    width: 30%;
+}
+
+.header-container .header-logo img {
+    width: 100%;
+    height: 100%;
+}
