@@ -11,46 +11,9 @@
 
     <body>
 
-        <header>
-            <div class="header-container">
-                <div class="header-logo">
-                    <a href="/"><img src="images/pepsico-logo-black-and-white.png" alt="Logo da Pepsico"> </a>
-                </div>
-                <div class="header-menu">
-                    <p>Olá Thiago, sentimos saudades!</p>
-                    <div class="header-button"></div>
-                    <div class="header-button"></div>
-                </div>
-            </div>
-        </header>
+        {% include "main-parts/header.njk"%}
 
-        <main>
-            <div class="main-container">
-
-                <div class="main-card">
-
-                    <div class="main-card-title">
-                        <h1>Agendamentos</h1>
-                        <img src="images/agendamento.png" alt="Calendário">
-                    </div>
-
-                    <div class="main-card-content">
-                        <h1>Novo Agendamento</h1>
-
-                        <div class="main-card-step-counter">
-                            <div class="main-button"></div>
-                            <div class="main-button"></div>
-                            <div class="main-button"></div>
-                            <div class="main-button"></div>
-                        </div>
-
-                        {% include "parts/main-card.njk"%}
-
-                    </div>
-                </div>
-
-            </div>
-        </main>
+        {% include "main-parts/main.njk" %}
 
         <footer></footer>
     </body>
