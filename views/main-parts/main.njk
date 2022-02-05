@@ -18,15 +18,9 @@
 
                 <div class="main-card-fields-and-text">
 
-                    <div class="main-card-text">
-                        <h2>Quando você virá?</h2>
-                        <p>Escolha a data que você deseja para a reserva da sua mesa.</p>
-                    </div>
-
-                    <div class="main-card-fields">
-                        <input type="date" name="dtAgendamento" id="dtAgendamento">
-                        <button>Continuar ></button>
-                    </div>
+                    {% include "../other-parts/main-card-fields/main-card-text.njk"%}
+                    {% include "../other-parts/main-card-fields/main-card-fields.njk"%}
+                
                 </div>
             </div>
         </div>
