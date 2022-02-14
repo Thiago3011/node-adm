@@ -17,6 +17,10 @@ header {
     width: 100%;
 }
 
+form {
+    width: 100%;
+}
+
 /* Variables */
 
 :root {
@@ -116,7 +120,6 @@ header {
 }
 
 .main-card-content {
-    border: red 1px solid;
     margin-top: 2em;
 }
 
@@ -184,9 +187,9 @@ header {
     box-shadow: var(--cor-secundaria) 0px 0px 0px 12px;
 }
 
-/* .progressbar li.active + li:after {
+.progressbar li.active::after {
     background-color: rgb(0, 183, 255);
-} */
+}
 
 /* Main  again */
 
@@ -196,16 +199,15 @@ header {
 
 .main-card-text h2 {
     color: var(--cor-principal);
-    display: none;
+    margin-top: 1em;
 }
 
 .main-card-text p {
     margin-top: 1em;
     font-size: 16px;
-    display: none;
 }
 
-.main-card-fields {
+.main-card-fields, form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -217,7 +219,7 @@ header {
     justify-content: center;
 }
 
-.main-card-fields button:first-child {
+.main-card-fields button:nth-child(1) {
     width: 8%;
     margin: 2.5em 80px 0 0;
     background-color: rgb(224, 224, 224);
@@ -229,7 +231,7 @@ header {
     box-shadow: gray 1px 1px 10px;
 }
 
-.main-card-fields button:last-child {
+.main-card-fields button:nth-child(3), .main-card-fields button:nth-child(2) {
     width: 18%;
     padding: 8px 20px 8px 20px;
     margin-top: 2.5em;
@@ -243,13 +245,17 @@ header {
     box-shadow: gray 1px 1px 10px;
 }
 
-.main-card-fields button:first-child:hover {
+.main-card-fields button:nth-child(3) {
+    display: none;
+}
+
+.main-card-fields button:nth-child(1):hover {
     background-color: rgb(202, 198, 198);
     transition: all 0.4s;
     cursor: pointer;
 }
 
-.main-card-fields button:last-child:hover {
+.main-card-fields button:nth-child(3):hover, .main-card-fields button:nth-child(2):hover {
     background-color: var(--cor-button-hover);
     transition: all 0.4s;
     cursor: pointer;
@@ -257,7 +263,6 @@ header {
 
 
 .btn-main-card {
-    margin-top: 2.5em;
     font-size: 16px;
     width: 100%;
     padding: 10px 10px;
@@ -277,11 +282,38 @@ header {
 
 .fields-group {
     display: none;
-    border: solid red 1px;
     grid-template-columns: 1fr 1fr;
     gap: 15px 30px;
+    width: 70%;
 }
 
 .fields-group:nth-child(3), .fields-group:nth-child(4) {
     grid-template-columns: 1fr;
 }
+
+.input-label {
+    margin-top: 2.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label label {
+    font-size: 14px;
+    color: var(--cor-principal);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.fields-group .input-label select {
+    cursor: pointer;
+
+}
+
+.fields-group .input-label textarea {
+    resize: none;
+}
+
+.title-and-p {
+    display: none;
+}
+

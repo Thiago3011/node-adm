@@ -1,7 +1,8 @@
 const buttonNext = document.querySelector('[data-btn-next]')
 const buttonBack = document.querySelector('[data-btn-back]')
-const title = document.getElementsByClassName('main-card-text-title')
-const p = document.getElementsByClassName('main-card-text-p')
+const buttonSubmit = document.querySelector('[data-btn-submit]')
+const stepCounterLi = document.querySelectorAll('[data-step-counter-li]')
+const titleAndP = document.getElementsByClassName('title-and-p')
 const fields = document.getElementsByClassName('fields-group')
 
 
@@ -9,11 +10,14 @@ var counter = 0
 
 counterCheck()
 
-buttonBack.addEventListener('click', () => {
+buttonBack.addEventListener('click', (event) => {
+    event.preventDefault()
 
-    title[counter].style.display = 'none'
-    p[counter].style.display = 'none'
+    titleAndP[counter].style.display = 'none'
     fields[counter].style.display = 'none'
+    stepCounterLi[counter].classList.remove('active')
+    buttonNext.style.display = 'block'
+    buttonSubmit.style.display = 'none'
     
     if (counter > -1) {
         counter--
@@ -24,10 +28,11 @@ buttonBack.addEventListener('click', () => {
     
 })
 
-buttonNext.addEventListener('click', () => {
+buttonNext.addEventListener('click', (event) => {
+
+    event.preventDefault()
     
-    title[counter].style.display = 'none'
-    p[counter].style.display = 'none'
+    titleAndP[counter].style.display = 'none'
     fields[counter].style.display = 'none'
     
     
@@ -43,31 +48,31 @@ function counterCheck() {
 
     switch (counter) {
         case 0:
-            title[counter].style.display = 'block'
-            p[counter].style.display = 'block'
+            titleAndP[counter].style.display = 'block'
             fields[counter].style.display = 'grid'
             buttonBack.style.display= 'none'
             break
 
         case 1:
-            title[counter].style.display = 'block'
-            p[counter].style.display = 'block'
+            titleAndP[counter].style.display = 'block'
             buttonBack.style.display= 'inline-block'
             fields[counter].style.display = 'grid'
-
+            stepCounterLi[counter].classList.add('active')
             break
 
         case 2:
-            title[counter].style.display = 'block'
-            p[counter].style.display = 'block'
+            titleAndP[counter].style.display = 'block'
             fields[counter].style.display = 'grid'
-
+            stepCounterLi[counter].classList.add('active')
+            buttonNext.style.display = 'none'
+            buttonSubmit.style.display = 'block'
             break
 
         case 3:
-            title[counter].style.display = 'block'
+            titleAndP[counter].style.display = 'block'
             fields[counter].style.display = 'grid'
-            p[counter].style.display = 'block'
+            stepCounterLi[counter].classList.add('active')
+
             break
         default:
             break;
