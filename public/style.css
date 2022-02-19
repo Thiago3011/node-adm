@@ -317,3 +317,52 @@ form {
     display: none;
 }
 
+/* Main Resume cards */
+
+.fields-group:nth-child(4) {
+    margin-top: 2em;
+    background: center / contain no-repeat url('./images//ticket-bg.71a78957.svg');
+    width: 548px;
+    height: 316px;
+    padding: 16px 26px;
+}
+
+.resume-card-box {
+    width: 100%;
+}
+
+.resume-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.4em;
+}
+
+.resume-card-title h3 {
+    color: rgb(100, 100, 100);
+    letter-spacing: 1px;
+}
+
+.resume-card .edit {
+    color: var(--cor-principal);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px 18px;
+}
+
+.resume-card .edit:hover {
+    background-color: rgb(212, 212, 212);
+}
+
+.resume-info-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    margin-bottom: 1.5em;
+}
+
+.resume-info h5 {
+    letter-spacing: 0.7px;
+    margin-bottom: 0.2em;
+    color: rgb(196, 196, 196);
+}

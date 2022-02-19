@@ -1,67 +1,112 @@
 <div class="main-card-fields">
     <form action="/agendamentos" method="post">
-
         <div class="fields-group">
-        <div class="input-label">
-            <label for="nome">teste</label>
-            <input type="text" name="nome" id="nome" placeholder="Nome" class="btn-main-card" value="Thiago">
+            <div class="input-label">
+                <label for="nome">teste</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome" class="btn-main-card" value="Thiago">
+            </div>
+            <div class="input-label">
+                <label for="data">teste</label>
+                <input type="date" name="data" id="data" class="btn-main-card" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+            </div>
         </div>
-        <div class="input-label">
-            <label for="data">teste</label>
-            <input type="date" name="data" id="data" class="btn-main-card" value="2022-02-10">
+        <div class="fields-group">
+            <div class="input-label">
+                <label for="localidade">Localidade</label>
+                <select name="localidade" id="localidade" class="btn-main-card">
+                    <option value="sorocaba"></option>
+                    <option value="sorocaba" selected>Sorocaba</option>
+                    <option value="sorocaba">Itu</option>
+                </select>
+            </div>
+            <div class="input-label">
+                <label for="area">Área</label>
+                <select name="area" id="area" class="btn-main-card">
+                    <option value="sorocaba"></option>
+                    <option value="admSnacks" selected>ADM de Snacks</option>
+                </select>
+            </div>
+            <div class="input-label">
+                <label for="secao">Seção</label>
+                <select name="secao" id="secao" class="btn-main-card">
+                    <option value="sorocaba"></option>
+                    <option value="fabrica" selected>Fábrica</option>
+                </select>
+            </div>
+            <div class="input-label">
+                <label for="mesa">Mesa</label>
+                <select name="mesa" id="mesa" class="btn-main-card">
+                    <option value="sorocaba"></option>
+                    <option value="1" selected>1</option>
+                </select>
+            </div>
         </div>
-    </div>
-    <div class="fields-group">
-
-        <div class="input-label">
-            <label for="localidade">Localidade</label>
-            <select name="localidade" id="localidade" class="btn-main-card">
-                <option value="sorocaba"></option>
-                <option value="sorocaba" selected>Sorocaba</option>
-                <option value="sorocaba">Itu</option>
-            </select>
+        <div class="fields-group">
+            <div class="input-label">
+                <label for="observacoes">Observações</label>
+                <textarea name="observacoes" id="observacoes" class="btn-main-card" cols="30" rows="10">asdasd</textarea>
+            </div>
         </div>
-
-        <div class="input-label">
-            <label for="area">Área</label>
-            <select name="area" id="area" class="btn-main-card">
-                <option value="sorocaba"></option>
-                <option value="admSnacks" selected>ADM de Snacks</option>
-            </select>
+        <div class="fields-group">
+            <div class="resume-card">
+                <div class="resume-card-box">
+                    <div class="resume-card-title">
+                        <h3>Data do agendamento</h3>
+                        <label class="edit">Edit</label>
+                    </div>
+                    <div class="resume-info-group">
+                        <div class="resume-info">
+                            <h5>Dia da Semana</h5>
+                            <p id="dia-semana" class="fields-resume-card"></p>
+                        </div>
+                        <div class="resume-info">
+                            <h5>Data</h5>
+                            <p id="data" class="fields-resume-card"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-card-box">
+                    <div class="resume-card-title">
+                        <h3>Seu Ambiente</h3>
+                        <label class="edit">Edit</label>
+                    </div>
+                    <div class="resume-info-group">
+                        <div class="resume-info">
+                            <h5>Localidade</h5>
+                            <p id="localidade" class="fields-resume-card"></p>
+                        </div>
+                        <div class="resume-info">
+                            <h5>Área</h5>
+                            <p id="area" class="fields-resume-card"></p>
+                        </div>
+                        <div class="resume-info">
+                            <h5>Seção</h5>
+                            <p id="secao" class="fields-resume-card"></p>
+                        </div>
+                        <div class="resume-info">
+                            <h5>Mesa</h5>
+                            <p id="mesa" class="fields-resume-card"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-card-box">
+                    <div class="resume-card-title">
+                        <h3>Algo a complementar?</h3>
+                        <label class="edit">Edit</label>
+                    </div>
+                    <div class="resume-info-group">
+                        <div class="resume-info">
+                            <h5>Observações</h5>
+                            <p id="observacoes" class="fields-resume-card"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="input-label">
-            <label for="secao">Seção</label>
-            <select name="secao" id="secao" class="btn-main-card">
-                <option value="sorocaba"></option>
-                <option value="fabrica" selected>Fábrica</option>
-            </select>
+        <div class="main-card-fields-btns">
+            <button data-btn-back>Voltar</button>
+            <button data-btn-next>Continuar ></button>
+            <button type="submit" data-btn-submit>Continuar ></button>
         </div>
-
-        <div class="input-label">
-            <label for="mesa">Mesa</label>
-            <select name="mesa" id="mesa" class="btn-main-card">
-                <option value="sorocaba"></option>
-                <option value="1" selected>1</option>
-            </select>
-        </div>
-
-    </div>
-    <div class="fields-group">
-        <div class="input-label">
-            <label for="observacoes">Observações</label>
-            <textarea name="observacoes" id="observacoes" class="btn-main-card" cols="30" rows="10">asdasd</textarea>
-        </div>
-    </div>
-    <div class="fields-group">
-        <input type="text" class="btn-main-card">
-    </div>
-    <div class="main-card-fields-btns">
-        <button data-btn-back>Voltar</button>
-        <button data-btn-next>Continuar ></button>
-        <button type="submit" data-btn-submit>Continuar ></button>
-    </div>
-
     </form>
-    
 </div>

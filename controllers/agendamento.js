@@ -6,8 +6,8 @@ module.exports = app => {
     app.post('/agendamentos', (req, res) => {
         const agendamento = req.body
 
-        Agendamento.adiciona(agendamento, res)
-            .then(agendamentoAgendado => res.status(200).json(agendamentoAgendado))
+        Agendamento.adiciona(agendamento)
+            .then(agendamentoAgendado => res.status(200).render('../views/index.njk'))
             .catch(erros => res.status(400).json(erros))
     })
 }

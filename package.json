@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all -p browsersync nodemon",
     "nodemon": "nodemon index.js",
-    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'css/*.css, njk/*.njk, html/*.html'"
+    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'css/*.css, svg/*.svg, njk/*.njk, html/*.html'"
   },
   "repository": {
     "type": "git",

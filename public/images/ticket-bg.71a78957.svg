@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="548" height="316" viewBox="0 0 548 316">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fafafa;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #ebebeb;
+      }
+
+      .cls-2, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke-width: 4px;
+        stroke-dasharray: 9;
+      }
+
+      .cls-3, .cls-4 {
+        fill: white;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="bg-ticket" transform="translate(-288.156 -338)">
+    <g id="bg" class="cls-1" transform="translate(294.156 338)">
+      <rect class="cls-5" width="536" height="316" rx="13"/>
+      <rect class="cls-6" x="0.5" y="0.5" width="535" height="315" rx="12.5"/>
+    </g>
+    <g id="Group_327" data-name="Group 327" transform="translate(288.156 437)">
+      <line id="Linha" class="cls-2" x2="538" transform="translate(4 8)"/>
+      <g id="Group_325" data-name="Group 325" transform="translate(0)">
+        <g id="Ellipse_105" data-name="Ellipse 105" class="cls-3" transform="translate(1 2)">
+          <circle class="cls-5" cx="6" cy="6" r="6"/>
+          <circle class="cls-6" cx="6" cy="6" r="5.5"/>
+        </g>
+        <rect id="Rectangle_61" data-name="Rectangle 61" class="cls-4" width="6" height="16"/>
+      </g>
+      <g id="Group_326" data-name="Group 326" transform="translate(535.003)">
+        <g id="Ellipse_105-2" data-name="Ellipse 105" class="cls-3" transform="translate(-0.003 2)">
+          <circle class="cls-5" cx="6" cy="6" r="6"/>
+          <circle class="cls-6" cx="6" cy="6" r="5.5"/>
+        </g>
+        <rect id="Rectangle_61-2" data-name="Rectangle 61" class="cls-4" width="6" height="16" transform="translate(6.997)"/>
+      </g>
+    </g>
+    <g id="Group_328" data-name="Group 328" transform="translate(288.156 533)">
+      <line id="Linha-2" data-name="Linha" class="cls-2" x2="538" transform="translate(4 8)"/>
+      <g id="Group_325-2" data-name="Group 325" transform="translate(0)">
+        <g id="Ellipse_105-3" data-name="Ellipse 105" class="cls-3" transform="translate(1 2)">
+          <circle class="cls-5" cx="6" cy="6" r="6"/>
+          <circle class="cls-6" cx="6" cy="6" r="5.5"/>
+        </g>
+        <rect id="Rectangle_61-3" data-name="Rectangle 61" class="cls-4" width="5" height="16" transform="translate(1)"/>
+      </g>
+      <g id="Group_326-2" data-name="Group 326" transform="translate(535.003)">
+        <g id="Ellipse_105-4" data-name="Ellipse 105" class="cls-3" transform="translate(-0.003 2)">
+          <circle class="cls-5" cx="6" cy="6" r="6"/>
+          <circle class="cls-6" cx="6" cy="6" r="5.5"/>
+        </g>
+        <rect id="Rectangle_61-4" data-name="Rectangle 61" class="cls-4" width="6" height="16" transform="translate(6.997)"/>
+      </g>
+    </g>
+  </g>
+</svg>
