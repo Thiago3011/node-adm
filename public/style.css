@@ -13,11 +13,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-header {
-    width: 100%;
-}
-
-form {
+header, form {
     width: 100%;
 }
 
