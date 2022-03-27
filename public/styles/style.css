@@ -36,7 +36,7 @@ header, form {
     align-items: center;
     justify-items: center;
     gap: 16%;
-    background-image: url("images/fundoPepsico.svg");
+    background-image: url("../images/fundoPepsico.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -56,6 +56,7 @@ header, form {
     width: 100%;
     display: flex;
     align-items: center;
+
 }
 
 .header-menu p {
@@ -159,10 +160,43 @@ header, form {
     background-color: var(--cor-branco);
 }
 
-.progressbar li::after {
+.progressbar li:nth-child(1)::before {
+    background-image: url('../images/calendar-scheduled.babe5078.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+
+.progressbar li:nth-child(2)::before {
+    background-image: url('../images/workspace.88aab8e2.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    opacity: 0.5;
+
+}
+
+.progressbar li:nth-child(3)::before {
+    background-image: url('../images/building.b3c0dd66.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    opacity: 0.5;
+}
+
+.progressbar li:nth-child(4)::before {
+    background-image: url('../images/calendar-scheduled.babe5078.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    opacity: 0.5;
+
+}
+
+.progressbar li:nth-child(2)::after {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 83%;
     height: 2px;
     background-color: #ddd;
     top: 40px;
@@ -170,17 +204,32 @@ header, form {
     z-index: -1;
 }
 
-.progressbar li:first-child::after {
-    content: none;
+.progressbar li:nth-child(3)::after {
+    content: '';
+    position: absolute;
+    width: 66%;
+    height: 2px;
+    background-color: #ddd;
+    top: 40px;
+    left: -33%;
+    z-index: -1;
 }
 
-/* .progressbar li.active {
-    color: blue;
-} */
+.progressbar li:nth-child(4)::after {
+    content: '';
+    position: absolute;
+    width: 66%;
+    height: 2px;
+    background-color: #ddd;
+    top: 40px;
+    left: -33%;
+    z-index: -1;
+}
 
 .progressbar li.active::before {
     border: var(--cor-principal) solid 3px;
     box-shadow: var(--cor-secundaria) 0px 0px 0px 12px;
+    opacity: 1;
 }
 
 .progressbar li.active::after {
@@ -283,6 +332,11 @@ header, form {
     width: 70%;
 }
 
+.fields-group:first-child {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
 .fields-group:nth-child(3), .fields-group:nth-child(4) {
     grid-template-columns: 1fr;
 }
@@ -291,6 +345,15 @@ header, form {
     margin-top: 2.5em;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.fields-group:first-child .input-label:first-child {
+    display: none;
+}
+
+.fields-group:first-child .input-label:nth-child(2) {
+    width: 40%;
 }
 
 .input-label label {
@@ -317,7 +380,7 @@ header, form {
 
 .fields-group:nth-child(4) {
     margin-top: 2em;
-    background: center / contain no-repeat url('./images//ticket-bg.71a78957.svg');
+    background: center / contain no-repeat url('../images//ticket-bg.71a78957.svg');
     width: 548px;
     height: 316px;
     padding: 16px 26px;
@@ -353,8 +416,9 @@ header, form {
 .resume-info-group {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+    justify-items: start;
     margin-bottom: 1.5em;
+    margin-left: 10px;
 }
 
 .resume-info h5 {
@@ -362,3 +426,64 @@ header, form {
     margin-bottom: 0.2em;
     color: rgb(196, 196, 196);
 }
+
+@media screen and (min-width: 1600px) {
+	.progressbar li:nth-child(2)::after {
+        content: '';
+        position: absolute;
+        width: 88%;
+        height: 2px;
+        background-color: #ddd;
+        top: 40px;
+        left: -50%;
+        z-index: -1;
+    }
+
+    .progressbar li:nth-child(3)::after, .progressbar li:nth-child(4)::after {
+        content: '';
+        position: absolute;
+        width: 76%;
+        height: 2px;
+        background-color: #ddd;
+        top: 40px;
+        left: -38%;
+        z-index: -1;
+    }
+
+    .progressbar li.active::after {
+        background-color: rgb(0, 183, 255);
+    }
+}
+
+/*
+<style type="text/css">
+    default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    
+    @media only screen and (min-width: 960px) {
+        styles for browsers larger than 960px; 
+    }
+    @media only screen and (min-width: 1440px) {
+        styles for browsers larger than 1440px; 
+    }
+    @media only screen and (min-width: 2000px) {
+        /* for sumo sized (mac) screens 
+    }
+    @media only screen and (max-device-width: 480px) {
+       /* styles for mobile browsers smaller than 480px; (iPhone) 
+    }
+    @media only screen and (device-width: 768px) {
+       /* default iPad screens 
+    }
+    /* different techniques for iPad screening 
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+      /* For portrait layouts only 
+    }
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+       For landscape layouts only
+    }
+*/
+
+/* login page */
+

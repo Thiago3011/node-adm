@@ -1,6 +1,8 @@
 const Agendamento = require('../models/agendamento')
 
 module.exports = app => {
+    app.get('/', (req, res) => res.render('../views/main-parts/login.njk'))
+
     app.get('/agendamentos', (req, res) => res.render('../views/index.njk'))
 
     app.post('/agendamentos', (req, res) => {

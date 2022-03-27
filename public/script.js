@@ -57,8 +57,6 @@ function editBtnClickCheck() {
 
 function counterCheck() {
     
-    console.log('Contador principal: ' + counter)
-
     switch (counter) {
         case 0:
             titleAndP[3].style.display = 'none'
@@ -125,7 +123,24 @@ function counterCheck() {
 
 
             for (let x = 0; x < fields.length; x++) {
-                fieldsResume[x].textContent = fields[x].value
+                
+                if (x == 1) {
+
+                    const diasSemana = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo']
+                    
+                    const dataErrada = fields[1].value
+                    const dataCerta = new Date(dataErrada).toLocaleDateString('pt-BR', { timeZone: 'UTC'})
+
+                    const validacaoDiaSemana = new Date(dataErrada).getDay()
+
+                    const diaSemana = diasSemana[validacaoDiaSemana]
+
+                    fieldsResume[0].textContent = diaSemana // dia da semana
+                    fieldsResume[1].textContent = dataCerta // data
+
+                } else {
+                    fieldsResume[x].textContent = fields[x].value
+                }
             }
 
             break
