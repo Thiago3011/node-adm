@@ -12,18 +12,27 @@
         <div class="login-body">
             <section class="login">
                 <div class="login-logo">
-                    <img src="images/logo-blue.f23f2e03.svg" alt="">
+                    <img src="images/logo-blue.f23f2e03.svg" alt="Logo da Pepsico">
                 </div>
                 <div class="login-form">
                     <form action="/" method="GET">
-                        <div class="login-email">
-                            <label for="email">E-mail</label>
-                            <input type="text" name="email" id="email">
+
+                        <div class="login-label">
+                            <label for="email-login">E-mail</label>
                         </div>
-                        <div class="login-email">
-                            <label for="password">Senha</label>
-                            <input type="password" name="password" id="password">
+                        <div class="login-group" data-input-border>
+                            <input type="text" name="email-login" id="email-login" data-input-login>
+                            <img src="images/arroba.png" alt="">
                         </div>
+
+                        <div class="login-label">
+                            <label for="password-login">Senha</label>
+                        </div>
+                        <div class="login-group" data-input-border>
+                            <input type="password" name="password-login" id="password-login" data-input-login>
+                            <img src="images/big-lock.png" alt="">
+                        </div>
+                    
                         <div class="login-esquecisenha">
                             <p>Esqueci a senha</p>
                         </div>
@@ -32,5 +41,7 @@
                 </div>
             </section>
         </div>
+
+        <script src="scripts/login.js"></script>
     </body>
 </html>

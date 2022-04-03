@@ -8,6 +8,7 @@ const fieldsGroup = document.getElementsByClassName('fields-group')
 const fields = document.getElementsByClassName('btn-main-card')
 const fieldsResume = document.getElementsByClassName('fields-resume-card')
 
+
 var counter = 0
 
 counterCheck()

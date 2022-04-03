@@ -24,6 +24,8 @@ header, form {
     --cor-secundaria: rgb(0, 160, 223);
     --cor-branco: white;
     --cor-button-hover: rgb(0, 49, 130);
+    --cor-input-border: rgb(204, 201, 201);
+    --cor-input-border-hover: rgb(87, 85, 85);
 }
 
 /* Header */
@@ -312,12 +314,12 @@ header, form {
     width: 100%;
     padding: 10px 10px;
     border-radius: 20px;
-    border: solid rgb(204, 201, 201) 1.5px;
+    border: solid var(--cor-input-border) 1.5px;
     outline: none;
 }
 
 .btn-main-card:hover {
-    box-shadow:rgb(87, 85, 85) 0px 0px 0px 1px;
+    box-shadow:var(--cor-input-border-hover) 0px 0px 0px 1px;
     cursor: text;
 }
 
