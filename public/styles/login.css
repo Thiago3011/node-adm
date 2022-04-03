@@ -17,7 +17,7 @@ body {
     margin-top: 2em;
     width: 30%;
     background-color: white;
-    height: 60vh;
+    height: 68vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,8 +55,14 @@ body {
     height: 22px;
 }
 
+/* Cor de fundo do autocomplete */
+.login-group input:-webkit-autofill {
+    box-shadow: -4px 0px 0px 10px rgb(232, 240, 254);
+    border-radius: 18px;
+}
+
 #email-login, #password-login { 
-    width: 90%;
+    width: 88%;
     margin: 0px 4px;
     outline: none;
     border: none;
@@ -82,4 +88,38 @@ body {
 
 .hover {
     border: var(--cor-input-border-hover) 1.8px solid
+}
+
+.login-esquecisenha {
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+    color: var(--cor-input-border);
+    font-size: 14px;
+}
+
+.login-esquecisenha p:hover {
+    text-decoration: underline var(--cor-principal);
+    color: var(--cor-input-border-hover);
+    cursor: pointer;
+}
+
+.login-submit {
+    width: 90%;
+    padding: 10px 20px;
+    margin-top: 2.5em;
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 18px;
+    box-shadow: gray 1px 1px 10px;
+}
+
+.login-submit:hover {
+    background-color: var(--cor-button-hover);
+    transition: all 0.4s;
+    cursor: pointer;
 }
